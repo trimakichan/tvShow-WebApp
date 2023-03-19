@@ -10,13 +10,13 @@ import { SearchComponent } from './search/search.component';
 @NgModule({
   declarations: [
     AppComponent,
-    SearchComponent
+    SearchComponent,
     ContentComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
-    BrowserModule,
+    HttpClientModule,
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
