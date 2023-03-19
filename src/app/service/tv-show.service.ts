@@ -14,9 +14,9 @@ export class TvShowService {
   constructor(private httpClient: HttpClient) { }
 
 getMovieData(input: string) {
-  return this.httpClient.get<ITvShowData>(`https://api.tvmaze.com/search/shows?q=${input}`)
+  return this.httpClient.get<ITvShowData>(`https://api.tvmaze.com/singlesearch/shows?q=${input}`)
   .pipe(map((data):ICurrentTV => {
-    console.log
+    console.log(data)
     return this.transformtoICurrentTV(data)}))
 }
 
