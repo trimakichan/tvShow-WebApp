@@ -1,4 +1,4 @@
-See it live at : https://trimakichan.github.io/tvshow-app/src/index.html
+
 
 # TvShowWebApp
 
