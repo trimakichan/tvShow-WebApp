@@ -17,14 +17,15 @@ export class ContentComponent {
   constructor(private TvShowService: TvShowService) {
     this.tvDataResult = {
       title: '',
-      description:''
+      image: '',
+      description: '',
+      genres:[],
+      rating: 0
     }
 
     this.TvShowService.getMovieData('girl').subscribe(data => {
       this.tvDataResult = data
       console.log(this.tvDataResult)})
   }
-  
-  
 
 }
