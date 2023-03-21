@@ -13,7 +13,7 @@ export class TvShowService {
 
   constructor(private httpClient: HttpClient) { }
 
-getMovieData(input: string) {
+getMovieData(input: string | number) {
   return this.httpClient.get<ITvShowData>(`https://api.tvmaze.com/singlesearch/shows?q=${input}`)
   .pipe(map((data):ICurrentTV => {
     console.log(data)
@@ -32,4 +32,3 @@ private transformtoICurrentTV(data: ITvShowData)
 }
 }
 
-// test
