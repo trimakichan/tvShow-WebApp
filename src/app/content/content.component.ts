@@ -24,8 +24,6 @@ export class ContentComponent {
       this.tvDataResult = data
       console.log(this.tvDataResult)})
   }
-
-
   
   
 
