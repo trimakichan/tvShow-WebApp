@@ -24,10 +24,10 @@ private transformtoICurrentTV(data: ITvShowData)
 : ICurrentTV {
   return {
     title: data.name,
-    // image: data.show.image.medium,
-    description: data.summary
-    // genre: data.show.genres,
-    // rating: data.show.rating 
+    image: data.image.original,
+    description: data.summary,
+    genres: data.genres,
+    rating: data.rating.average
   }
 }
 }
