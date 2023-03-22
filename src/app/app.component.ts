@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ContentChild } from '@angular/core';
+import { TvShowService } from './service/tv-show.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tvShow-WebApp';
+  
 }
