@@ -1,3 +1,14 @@
+/* .container {
+   
+    height: 100%;
+
+} */
+
+/* .matList {
+
+   
+} */
+
 .card {
     width: 90%;
     height: 80%;
@@ -17,9 +28,6 @@
     margin-top: 20px;
 }
 
-.matList {
-    border-radius: 20px;
-}
 
 .pStyle {
     color: aliceblue;

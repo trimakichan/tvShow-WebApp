@@ -1,5 +1,7 @@
 
-<mat-grid-list cols="7" rowHeight="700px">
+<div class="container" fxLayout="column" fxLayoutAlign="center center" fxFlex>
+<mat-grid-list class="matList" cols="7" rowHeight="700px">
+    <div>
     <mat-grid-tile colspan="2" style="background-color: red;">
         <img [src]="tvDataResult.image" alt="Show Image" 
         style="object-fit: cover;
@@ -23,8 +25,10 @@
           </mat-card>
     
     </mat-grid-tile>
+</div>
   
 </mat-grid-list>
+</div>
 
 <!-- <mat-grid-list cols="7" rowHeight="300px">
     <mat-grid-tile 
