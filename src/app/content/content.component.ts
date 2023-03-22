@@ -1,15 +1,13 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
 // import { Observable } from 'rxjs';
 // import {map} from 'rxjs/operators'
-import {TvShowService} from '../service/tv-show.service';
-import {ICurrentTV} from '../icurrent-tv'
-
-
+import { TvShowService } from '../service/tv-show.service';
+import { ICurrentTV } from '../icurrent-tv';
 
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
-  styleUrls: ['./content.component.css']
+  styleUrls: ['./content.component.css'],
 })
 export class ContentComponent {
   tvDataResult: ICurrentTV;
@@ -19,13 +17,23 @@ export class ContentComponent {
       title: '',
       image: '',
       description: '',
-      genres:[],
-      rating: 0
-    }
+      genres: [],
+      rating: 0,
+    };
 
-    this.TvShowService.getMovieData('girl').subscribe(data => {
-      this.tvDataResult = data
-      console.log(this.tvDataResult)})
+    this.TvShowService.getMovieData('girl').subscribe((data) => {
+      this.tvDataResult = data;
+      // This is for the description 
+    const div = document.querySelector('#summary');
+    const p = document.createElement("p");
+    p.innerHTML = this.tvDataResult.description;
+    div?.appendChild(p)
+  
+      
+      console.log(this.tvDataResult);
+    
   }
-
+  )}
 }
+
+// const descpriton = this.tvDataResult.description.replace(/<p>|<b>|/g, '')
