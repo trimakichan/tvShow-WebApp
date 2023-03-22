@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormControl, Validators} from '@angular/forms';
 
 @Component({
@@ -7,21 +8,15 @@ import {FormControl, Validators} from '@angular/forms';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent {
-
+  search = new FormControl();
+  '@output() searchEvent = ' 
 }
+
+
+/** @title Simple form field */
 @Component({
-  selector: 'form-field-error-example',
-  templateUrl: 'form-field-error-example.html',
-  styleUrls: ['form-field-error-example.css'],
+  selector: 'form-field-overview-example',
+  templateUrl: 'form-field-overview-example.html',
+  styleUrls: ['form-field-overview-example.css'],
 })
-export class FormFieldErrorExample {
-  email = new FormControl('', [Validators.required, Validators.email]);
-
-  getErrorMessage() {
-    if (this.email.hasError('required')) {
-      return 'You must enter a value';
-    }
-
-    return this.email.hasError('email') ? 'Not a valid email' : '';
-  }
-}
+export class FormFieldOverviewExample {}
