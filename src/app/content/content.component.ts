@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
 import { TvShowService } from '../service/tv-show.service';
 import { ICurrentTV } from '../icurrent-tv';
 
+
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
@@ -21,7 +22,7 @@ export class ContentComponent {
       rating: 0,
     };
 
-    this.TvShowService.getMovieData('girl').subscribe((data) => {
+    this.TvShowService.getMovieData('dog').subscribe((data) => {
       this.tvDataResult = data;
       // This is for the description 
     const div = document.querySelector('#summary');

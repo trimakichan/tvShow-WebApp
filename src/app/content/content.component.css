@@ -1,13 +1,3 @@
-/* .container {
-   
-    height: 100%;
-
-} */
-
-/* .matList {
-
-   
-} */
 
 .card {
     width: 90%;
@@ -23,6 +13,28 @@
    font-size: 3rem;
 }
 
+.imgContainer {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-right: 2px solid black;
+
+}
+
+.image {
+    object-fit: cover; 
+    width: 100%; 
+    height: 100%
+}
+
+.infoContainer {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-left: 2px solid black;
+   
+}
+
 .subtitle {
     color: rgb(231, 231, 120);
     margin-top: 20px;
@@ -33,3 +45,9 @@
     color: aliceblue;
   
 }
+
+.grid-layout-custom{
+    width: 100vw;
+    height: 100vh;
+   
+  }
