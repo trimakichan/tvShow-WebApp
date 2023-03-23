@@ -21,7 +21,8 @@ export class AppComponent {
 
   constructor(private TvShowService: TvShowService){}
 
-  doSearch(searchValue: string) {
+  // change it to string later
+  doSearch(searchValue: any) {
     this.TvShowService.getMovieData(searchValue).subscribe(data => this.searchResult = data)
   }
 
