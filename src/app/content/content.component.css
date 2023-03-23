@@ -1,4 +1,5 @@
 
+
 .card {
     width: 90%;
     height: 80%;
@@ -43,8 +44,7 @@
 
 .pStyle {
     color: aliceblue;
-    word-wrap: break-word;
-  
+
 }
 
 .grid-layout-custom{
