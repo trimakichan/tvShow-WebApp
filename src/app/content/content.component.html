@@ -3,7 +3,7 @@
     <mat-grid-list
       class="matList"
       cols="5"
-      rowHeight="600px"
+      rowHeight="700px"
       class="grid-layout-custom"
     >
     <mat-grid-tile colspan="1" ></mat-grid-tile>
@@ -21,11 +21,14 @@
                 <h1>{{tvDataResult.title }}</h1>
             </mat-card-title>
             <mat-card-subtitle class="subtitle" *ngIf="tvDataResult.genres"
-              >Genres: {{ tvDataResult.genres }}</mat-card-subtitle
+              >
+              <h3> Genres: {{ tvDataResult.genres }}</h3>
+              </mat-card-subtitle
             >
             <mat-card-subtitle class="subtitle" *ngIf="tvDataResult.rating"
-              >Rating: {{ tvDataResult.rating }} / 10</mat-card-subtitle
-            >
+              > <h3><mat-icon>star_rate</mat-icon> Rating : {{ tvDataResult.rating }} / 10 <mat-icon>star_rate</mat-icon></h3>
+              </mat-card-subtitle
+            > 
           </mat-card-header>
           <mat-card-content style="margin-top: 10px">
 
