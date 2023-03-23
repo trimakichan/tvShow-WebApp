@@ -22,14 +22,17 @@ export class ContentComponent {
       rating: 0,
     };
 
-    this.TvShowService.getMovieData('dog').subscribe((data) => {
+    this.TvShowService.getMovieData('pokemon').subscribe((data) => {
       this.tvDataResult = data;
-      // This is for the description 
+
+
+    // ----This is for the description ------------
     const div = document.querySelector('#summary');
     const p = document.createElement("p");
     p.innerHTML = this.tvDataResult.description;
     div?.appendChild(p)
   
+    // --------------------------------------------
       
       console.log(this.tvDataResult);
     

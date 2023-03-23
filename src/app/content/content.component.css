@@ -10,7 +10,7 @@
     color: red;
    font-family: 'Ubuntu', sans-serif;
    font-weight: bold;
-   font-size: 3rem;
+   font-size: 1.3rem;
 }
 
 .imgContainer {
@@ -43,6 +43,7 @@
 
 .pStyle {
     color: aliceblue;
+    word-wrap: break-word;
   
 }
 

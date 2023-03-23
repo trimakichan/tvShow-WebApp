@@ -17,9 +17,9 @@
       <mat-grid-tile colspan="2" class="infoContainer">
         <mat-card class="card">
           <mat-card-header>
-            <mat-card-title class="title">{{
-              tvDataResult.title
-            }}</mat-card-title>
+            <mat-card-title class="title">
+                <h1>{{tvDataResult.title }}</h1>
+            </mat-card-title>
             <mat-card-subtitle class="subtitle" *ngIf="tvDataResult.genres"
               >Genres: {{ tvDataResult.genres }}</mat-card-subtitle
             >
@@ -28,8 +28,9 @@
             >
           </mat-card-header>
           <mat-card-content style="margin-top: 10px">
+
             <div class="pStyle" id="summary"></div>
-            <!-- <p>hi</p> -->
+
           </mat-card-content>
           <!-- <mat-card-actions>
               <button mat-button>LIKE</button>
@@ -42,30 +43,3 @@
   </div>
 
 
-<!-- </div> -->
-
-<!-- <mat-grid-list cols="7" rowHeight="300px">
-    <mat-grid-tile 
-        *ngFor="let tile of tiles"
-        [colspan]="tile.cols"
-        [rowspan]="tile.rows"
-        [style.background]="tile.color">
-        <img [src]="tvDataResult.image" alt="Show Image" 
-        style="object-fit: cover;
-        width: 100%;
-        height: 100%;">
-  
-    </mat-grid-tile>
-  </mat-grid-list> -->
-
-<!-- 
-<div>
-    <h1>{{tvDataResult.title}}</h1>
-    <p>{{tvDataResult.description}}</p>
-    <p>{{tvDataResult.genres}}</p>
-    <p>{{tvDataResult.rating}}</p>
-
-    <img [src]="tvDataResult.image" alt="">
-   
-</div>
-    -->
