@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 // import { Observable } from 'rxjs';
 // import {map} from 'rxjs/operators'
 import { TvShowService } from '../service/tv-show.service';
@@ -11,7 +11,7 @@ import { ICurrentTV } from '../icurrent-tv';
   styleUrls: ['./content.component.css'],
 })
 export class ContentComponent {
-  tvDataResult: ICurrentTV;
+@Input() tvDataResult: ICurrentTV;
 
   constructor(private TvShowService: TvShowService) {
     this.tvDataResult = {

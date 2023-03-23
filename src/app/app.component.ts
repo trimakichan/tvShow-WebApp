@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {TvShowService} from './service/tv-show.service'
+import {ICurrentTV} from './icurrent-tv'
 
 
 @Component({
@@ -8,4 +10,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tvShow-WebApp';
+  searchResult: ICurrentTV = {
+    title: '',
+    image: '',
+    description: '',
+    genres: [],
+    rating: 0,
+  }
+
+
+  constructor(private TvShowService: TvShowService){}
+
+  doSearch(searchValue: string) {
+    this.TvShowService.getMovieData(searchValue).subscribe(data => this.searchResult = data)
+  }
+
+
 }
