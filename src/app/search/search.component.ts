@@ -17,7 +17,7 @@ export class SearchComponent implements OnInit{    //need to read user input for
     this.search.valueChanges //when the value of the input changes write what you want it to do
       .pipe(debounceTime(1000))
       .subscribe(searchValue  => { //what user types binds to searchValue variable
-        if (!this.search.invalid(parameter){
+        if (!this.search.invalid (parameter)) {
           this.searchEvent.emit(searchValue)//will return what user types
 
         }

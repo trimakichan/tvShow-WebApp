@@ -1,8 +1,8 @@
-import { Component} from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 // import { Observable } from 'rxjs';
 // import {map} from 'rxjs/operators'
-import {TvShowService} from '../service/tv-show.service';
-import {ICurrentTV} from '../icurrent-tv'
+
+
 
 
 
@@ -12,9 +12,9 @@ import {ICurrentTV} from '../icurrent-tv'
   styleUrls: ['./content.component.css']
 })
 export class ContentComponent {
-  tvDataResult: ICurrentTV;
+  @Input() current: tvDataResult: ICurrentTV;
 
-  constructor(private TvShowService: TvShowService) {
+  constructor() {
     this.tvDataResult = {
       title: '',
       image: '',
@@ -22,10 +22,5 @@ export class ContentComponent {
       genres:[],
       rating: 0
     }
-
-    this.TvShowService.getMovieData('girl').subscribe(data => {
-      this.tvDataResult = data
-      console.log(this.tvDataResult)})
   }
-
 }
