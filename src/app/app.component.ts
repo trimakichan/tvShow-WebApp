@@ -10,17 +10,19 @@ import { TvShowService } from './service/tv-show.service';
 export class AppComponent {
   title = 'tvShow-WebApp';
   currentTV: ICurrentTV = { //this connects the tv componenet
-    this.tvDataResult = {
       title: '',
       image: '',
       description: '',
       genres:[],
       rating: 0
     }
+
     constructor(private TvShowService: TvShowService) {}
-    doSearch)searchValue: string){
-      const userInput = SearchValue.split(',').map(s => s.trim());
-      this.TvShowService.getcurrentTV(userInput[0]).subscribe  
-        (data => this.currentTV = data)
+
+
+    doSearch(searchValue: string) {
+      // const userInput = searchValue.split(',').map(s => s.trim());
+      this.TvShowService.getMovieData(searchValue).subscribe (data => this.currentTV = data)
     }
 }
+

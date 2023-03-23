@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { ContentComponent } from './content/content.component';
 import { SearchComponent } from './search/search.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -22,7 +23,6 @@ import { MatButtonModule} from '@angular/material/button';
   ],
   imports: [
     BrowserModule,
-    NgModule,
     HttpClientModule,
     BrowserModule,
     BrowserAnimationsModule,
@@ -34,8 +34,9 @@ import { MatButtonModule} from '@angular/material/button';
     MatButtonModule ,
     MatInputModule,
   ],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [],
   bootstrap: [AppComponent]
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+
 })
 export class AppModule { }

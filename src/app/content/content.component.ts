@@ -1,9 +1,7 @@
 import { Component, OnInit, Input} from '@angular/core';
+import {ICurrentTV} from '../icurrent-tv'
 // import { Observable } from 'rxjs';
 // import {map} from 'rxjs/operators'
-
-
-
 
 
 @Component({
@@ -12,7 +10,7 @@ import { Component, OnInit, Input} from '@angular/core';
   styleUrls: ['./content.component.css']
 })
 export class ContentComponent {
-  @Input() current: tvDataResult: ICurrentTV;
+  @Input() tvDataResult: ICurrentTV;
 
   constructor() {
     this.tvDataResult = {
