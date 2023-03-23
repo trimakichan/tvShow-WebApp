@@ -1,1 +1,14 @@
-<p>search works!</p>
+<form>
+ 
+    <mat-form-field appearance="outline">
+        <mat-label>Movie Title </mat-label>
+        <mat-icon matPrefix>search</mat-icon>
+        <input matInput aria-label="Movie Title" [formControl]="search"> 
+        <!-- //this binds to formControl. Put name (search) into TS -->
+        <mat-hint>Specify movie title like Superman</mat-hint>
+        <mat-error *ngIf="search.invalid">
+            Type three of more characters to search
+        </mat-error>
+    </mat-form-field>
+</form>
+
