@@ -1,8 +1,4 @@
+<app-search (searchEvent)="doSearch($event)"></app-search> 
+<!-- formula to pass info like a click event -->
 
-<div fxLayout="row">
-  <app-search (searchEvent)="doSearch($event)"></app-search>
-</div>
-
-
-    <app-content [tvDataResult]="searchResult"></app-content>
-
+<app-content [tvDataResult] = "currentTV"></app-content>

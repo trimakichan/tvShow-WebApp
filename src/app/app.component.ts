@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
-import {TvShowService} from './service/tv-show.service'
-import {ICurrentTV} from './icurrent-tv'
-
+import { Component, ContentChild } from '@angular/core';
+import { ICurrentTV } from './icurrent-tv';
+import { TvShowService } from './service/tv-show.service';
 
 @Component({
   selector: 'app-root',
@@ -10,21 +9,20 @@ import {ICurrentTV} from './icurrent-tv'
 })
 export class AppComponent {
   title = 'tvShow-WebApp';
-  searchResult: ICurrentTV = {
-    title: '',
-    image: '',
-    description: '',
-    genres: [],
-    rating: 0,
-  }
+  currentTV: ICurrentTV = { //this connects the tv componenet
+      title: '',
+      image: '',
+      description: '',
+      genres:[],
+      rating: 0
+    }
+
+    constructor(private TvShowService: TvShowService) {}
 
 
-  constructor(private TvShowService: TvShowService){}
-
-  // change it to string later
-  doSearch(searchValue: any) {
-    this.TvShowService.getMovieData(searchValue).subscribe(data => this.searchResult = data)
-  }
-
-
+    doSearch(searchValue: string) {
+      // const userInput = searchValue.split(',').map(s => s.trim());
+      this.TvShowService.getMovieData(searchValue).subscribe (data => this.currentTV = data)
+    }
 }
+

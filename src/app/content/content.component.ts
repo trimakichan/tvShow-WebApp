@@ -1,8 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
+import {ICurrentTV} from '../icurrent-tv'
 // import { Observable } from 'rxjs';
 // import {map} from 'rxjs/operators'
-import { TvShowService } from '../service/tv-show.service';
-import { ICurrentTV } from '../icurrent-tv';
 
 
 @Component({
@@ -11,33 +10,17 @@ import { ICurrentTV } from '../icurrent-tv';
   styleUrls: ['./content.component.css'],
 })
 export class ContentComponent {
-@Input() tvDataResult: ICurrentTV;
+  @Input() tvDataResult: ICurrentTV;
 
-  constructor(private TvShowService: TvShowService) {
+  constructor() {
     this.tvDataResult = {
       title: '',
       image: '',
       description: '',
-      genres: [],
-      rating: 0,
-    };
-
-    this.TvShowService.getMovieData('pokemon').subscribe((data) => {
-      this.tvDataResult = data;
-
-
-    // ----This is for the description ------------
-    const div = document.querySelector('#summary');
-    const p = document.createElement("p");
-    p.innerHTML = this.tvDataResult.description;
-    div?.appendChild(p)
-  
-    // --------------------------------------------
-      
-      console.log(this.tvDataResult);
-    
+      genres:[],
+      rating: 0
+    }
   }
-  )}
 }
 
 // const descpriton = this.tvDataResult.description.replace(/<p>|<b>|/g, '')
