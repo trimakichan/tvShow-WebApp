@@ -1,9 +1,13 @@
 
-  <div class="container">
+<div class="noData" *ngIf="!tvDataResult.title">
+  No Data Available
+</div>
+
+  <div class="container"  *ngIf="tvDataResult.title">
     <mat-grid-list
       class="matList"
       cols="5"
-      rowHeight="700px"
+      rowHeight="600px"
       class="grid-layout-custom"
     >
     <mat-grid-tile colspan="1" ></mat-grid-tile>
@@ -21,8 +25,7 @@
                 <h1>{{tvDataResult.title }}</h1>
             </mat-card-title>
             <mat-card-subtitle class="subtitle" *ngIf="tvDataResult.genres"
-              >
-              <h3> Genres: {{ tvDataResult.genres }}</h3>
+              ><h3> Genres: {{ tvDataResult.genres }}</h3>
               </mat-card-subtitle
             >
             <mat-card-subtitle class="subtitle" *ngIf="tvDataResult.rating"
@@ -32,7 +35,8 @@
           </mat-card-header>
           <mat-card-content style="margin-top: 10px">
 
-            <div class="pStyle" id="summary"></div>
+            <div class="pStyle" id="summary" style="overflow-wrap: break-word;" [innerHTML]="tvDataResult.description"></div>
+            <!-- *ngIf="tvDataResult.description?addText():false" -->
 
           </mat-card-content>
           <!-- <mat-card-actions>

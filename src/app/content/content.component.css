@@ -4,7 +4,8 @@
     width: 90%;
     height: 80%;
     border-radius: 20px;
-    box-shadow: 5px 10px 10px #888888;
+    box-shadow: 5px 10px 10px;
+    background-color: rgb(51, 49, 49, .3);
 }
 
 .title {
@@ -15,7 +16,7 @@
 }
 
 .imgContainer {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, .3);
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     border-right: 2px solid black;
@@ -29,7 +30,7 @@
 }
 
 .infoContainer {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.4);
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     border-left: 2px solid black;
@@ -61,4 +62,9 @@ h3 mat-icon {
 
   }
 
- 
+ .noData {
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    margin: 20px;
+ }

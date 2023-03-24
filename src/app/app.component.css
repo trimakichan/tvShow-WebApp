@@ -1,0 +1,41 @@
+.searchDiv {
+    height: 100px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+
+}
+
+
+span  mat-icon {
+    vertical-align: middle;
+}
+
+mat-toolbar {
+    color: #E91E63;
+    font-size: x-large;
+    font-family: 'Climate Crisis', cursive;
+    /* background-color: #f9c5d1; */
+    background-color: #d9e4f5;
+    background-image: linear-gradient(315deg, #d9e4f5 0%, #f5e3e6 74%);
+
+}
+
+.searchTitle {
+    margin: 30px 0;
+    color: white;
+    text-align: center;
+    
+   
+
+}
+
+.searchTitle h2 {
+    font-family:'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.icon {
+    text-align: center;
+}

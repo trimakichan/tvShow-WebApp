@@ -11,8 +11,12 @@ import { MatInputModule } from '@angular/material/input';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MatIconModule } from '@angular/material/icon';
+import {MatIconModule } from '@angular/material/icon';
 import { MatButtonModule} from '@angular/material/button';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatCardModule} from '@angular/material/card';
+import {MatToolbarModule} from '@angular/material/toolbar';
+
 
 
 @NgModule({
@@ -31,8 +35,11 @@ import { MatButtonModule} from '@angular/material/button';
     FormsModule,
     ReactiveFormsModule,
     MatIconModule,
-    MatButtonModule ,
-    MatInputModule,
+    MatButtonModule,
+    MatGridListModule,
+    MatCardModule,
+    MatToolbarModule
+
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [],
