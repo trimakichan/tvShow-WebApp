@@ -7,9 +7,9 @@ import {ICurrentTV} from '../icurrent-tv'
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
-  styleUrls: ['./content.component.css']
+  styleUrls: ['./content.component.css'],
 })
-export class ContentComponent {
+export class ContentComponent implements OnInit {
   @Input() tvDataResult: ICurrentTV;
 
   constructor() {
@@ -19,6 +19,14 @@ export class ContentComponent {
       description: '',
       genres:[],
       rating: 0
-    }
-  }
+    } 
+     
 }
+
+  ngOnInit(): void { 
+  
+  }
+
+}
+
+// const descpriton = this.tvDataResult.description.replace(/<p>|<b>|/g, '')

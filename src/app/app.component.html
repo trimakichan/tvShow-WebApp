@@ -1,4 +1,17 @@
+<mat-toolbar>
+
+  <span><mat-icon>tv_with_assistant</mat-icon> TV Search</span>
+
+</mat-toolbar>
+
+<div class="searchTitle">
+ <h2><span><mat-icon class="icon">search</mat-icon>Search</span></h2>
+  </div>
+
+<div class="searchDiv">
+
 <app-search (searchEvent)="doSearch($event)"></app-search> 
 <!-- formula to pass info like a click event -->
+</div>
 
-<app-content [tvDataResult] = "currentTV"></app-content>
+<app-content [tvDataResult] = "currentTV" ></app-content>

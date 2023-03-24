@@ -1,11 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */  
 
-html, body { height: 100%; }
-body {
-     margin: 0; font-family: Roboto,
-      "Helvetica Neue", sans-serif;
-    background-color: #1e1b18;
-    }
+html, body 
+{
+    min-height: 100%;
+    height: 100%;
+    margin: 0;
+
+}
+body { 
+    /* margin: 0;  */
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+    /* background-color: #130f40; */
+    background-color: #000000;
+    background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
 
 
-    
+
+ }
